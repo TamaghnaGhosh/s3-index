@@ -3,11 +3,245 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+
+    <title>S3 Static Website</title>
+
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, #0f172a, #1e293b);
+        color: white;
+        min-height: 100vh;
+      }
+
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 8%;
+        background: rgba(15, 23, 42, 0.8);
+      }
+
+      .logo {
+        font-size: 24px;
+        font-weight: bold;
+        color: #38bdf8;
+      }
+
+      nav a {
+        color: white;
+        text-decoration: none;
+        margin-left: 25px;
+      }
+
+      nav a:hover {
+        color: #38bdf8;
+      }
+
+      .hero {
+        min-height: 75vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 40px 20px;
+      }
+
+      .hero-content {
+        max-width: 750px;
+      }
+
+      .badge {
+        display: inline-block;
+        background: #0ea5e9;
+        padding: 8px 16px;
+        border-radius: 20px;
+        font-size: 14px;
+        margin-bottom: 20px;
+      }
+
+      h1 {
+        font-size: 56px;
+        margin-bottom: 20px;
+      }
+
+      h1 span {
+        color: #38bdf8;
+      }
+
+      .hero p {
+        font-size: 20px;
+        line-height: 1.7;
+        color: #cbd5e1;
+        margin-bottom: 30px;
+      }
+
+      .buttons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+      }
+
+      .btn {
+        padding: 14px 28px;
+        border-radius: 8px;
+        text-decoration: none;
+        font-weight: bold;
+        transition: 0.3s;
+      }
+
+      .primary {
+        background: #0ea5e9;
+        color: white;
+      }
+
+      .primary:hover {
+        background: #0284c7;
+      }
+
+      .secondary {
+        border: 1px solid #38bdf8;
+        color: #38bdf8;
+      }
+
+      .secondary:hover {
+        background: #38bdf8;
+        color: #0f172a;
+      }
+
+      .features {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        padding: 50px 8%;
+        flex-wrap: wrap;
+      }
+
+      .card {
+        width: 280px;
+        padding: 30px;
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        text-align: center;
+      }
+
+      .card h3 {
+        margin-bottom: 12px;
+        color: #38bdf8;
+      }
+
+      .card p {
+        color: #cbd5e1;
+        line-height: 1.6;
+      }
+
+      footer {
+        text-align: center;
+        padding: 25px;
+        color: #94a3b8;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+      }
+
+      @media (max-width: 600px) {
+        h1 {
+          font-size: 40px;
+        }
+
+        .hero p {
+          font-size: 16px;
+        }
+
+        nav {
+          padding: 20px;
+        }
+
+        nav a {
+          margin-left: 10px;
+        }
+
+        .buttons {
+          flex-direction: column;
+        }
+      }
+    </style>
   </head>
+
   <body>
-    <h1>Hello, S3 Bucket</h1>
-    <p>This is a paragraph.</p>
-    <span>This is S3 bucket</span>
+    <!-- Navigation -->
+    <nav>
+      <div class="logo">S3 Website</div>
+
+      <div>
+        <a href="#">Home</a>
+        <a href="#features">Features</a>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-content">
+        <div class="badge">AWS S3 Static Website</div>
+
+        <h1>
+          Welcome to <span>My Website</span>
+        </h1>
+
+        <p>
+          This is a modern static website hosted directly from an
+          Amazon S3 bucket. No server required.
+        </p>
+
+        <div class="buttons">
+          <a href="#features" class="btn primary">
+            Explore
+          </a>
+
+          <a href="https://aws.amazon.com/s3/" class="btn secondary">
+            Learn S3
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features" id="features">
+
+      <div class="card">
+        <h3>⚡ Fast</h3>
+        <p>
+          Static files are delivered quickly without requiring
+          a traditional web server.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>☁️ AWS S3</h3>
+        <p>
+          Your HTML, CSS and JavaScript files are stored inside
+          an Amazon S3 bucket.
+        </p>
+      </div>
+
+      <div class="card">
+        <h3>🔒 Reliable</h3>
+        <p>
+          Amazon S3 provides highly durable storage for your
+          static website files.
+        </p>
+      </div>
+
+    </section>
+
+    <!-- Footer -->
+    <footer>
+      © 2026 My S3 Website | Hosted on Amazon S3
+    </footer>
   </body>
 </html>
